@@ -7,5 +7,6 @@ export default {
     text: 'hsl(0, 0%, 100%);',
     headerColor: 'hsl(207, 26%, 17%);',
     icon: 'hsl(255,255,255);',
+    input: 'hsl(0, 0%, 100%);'
   },
 }

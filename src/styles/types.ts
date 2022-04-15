@@ -10,6 +10,7 @@ declare module 'styled-components' {
       text: string
       headerColor: string
       icon: string
+      input: string
     }
   }
 }

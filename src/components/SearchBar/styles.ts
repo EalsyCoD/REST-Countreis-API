@@ -22,11 +22,15 @@ export const Input = styled.input`
 width: 400px;
 height: 45px;
 padding-left: 50px;
+border-radius: 5px;
+background-color: ${(props) => props.theme.colors.backgroundColor};
 &:focus{
-  
+  color: ${(props) => props.theme.colors.text};
 }
-
-  `
+&::placeholder{
+  color: ${(props) => props.theme.colors.input};
+}
+`
 export const Button = styled.div`
 margin-top: 10px;
 `
