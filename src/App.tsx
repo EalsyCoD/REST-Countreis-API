@@ -5,15 +5,17 @@ import Light from './styles/themes/light'
 import Dark from './styles/themes/dark'
 
 import Header from './components/Header';
-import SearchBar from './components/SearchBar';
-import CountriesList from './components/CountriesList';
 import { useDispatch } from 'react-redux';
 import { setCountries } from './ducks/actions/CountriesAction';
+
+import Home from './pages/main'
+import Country from './pages/country'
+import { Route, Routes } from 'react-router-dom';
 
 const App = (): JSX.Element => {
 const dispatch = useDispatch()
   React.useEffect(() => {
-    dispatch(setCountries('ar'))
+    dispatch(setCountries('a'))
   }, [dispatch])
 
   const [theme, setTheme] = React.useState<DefaultTheme>(Dark)
@@ -27,8 +29,10 @@ const dispatch = useDispatch()
     <ThemeProvider theme={theme}>
     <GlobalStyle />
     <Header toggleTheme={toggleTheme} titleTheme={theme.title} />
-    <SearchBar />
-    <CountriesList />
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/country/:name' element={<Country />} />
+    </Routes>
     </ThemeProvider>
     </React.Fragment>
     

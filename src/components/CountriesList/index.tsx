@@ -7,17 +7,26 @@ import { Container } from './styles'
 
 const CountriesList = (): JSX.Element => {
   const countries = useSelector((state: RootState) => state.countries)
+  //   const countries = state.countries
+  //   const region = state.filter.region
+  //   if(region === 'Filter by Region'){
+  //     return countries
+  //   } else{
+  //     return countries.filter((el) => el.region === region)
+  //   }
+  // })
   console.log(countries)
   return (
     <React.Fragment>
-      <Container>
-          <React.Fragment>
+      {countries.length > 0 ? (
+        <Container>
             {countries.map((item: any) => (
               <Countrie key={item.name} data={item} />
             ))}
-          </React.Fragment>
-          <React.Fragment></React.Fragment>
-      </Container>
+            </Container>
+      ) : (
+        <React.Fragment></React.Fragment>
+      )}
     </React.Fragment>
   )
 }

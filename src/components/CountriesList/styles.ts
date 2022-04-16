@@ -10,7 +10,7 @@ export const CountriesContainer = styled.div`
   max-width: 330px;
   margin: -5px 0 0 -47px;
   display: flex;
-  padding-right: 50px;
+  padding: 0 50px 30px 0;
 `
 export const IconCountrie = styled.img`
   bottom: 0px;
@@ -41,7 +41,7 @@ margin: 10px 0 0 15px;
 export const Population = styled.p`
 font-weight: 600;
 color: ${(props) => props.theme.colors.text};
-margin: 10px 0 0 15px;
+margin: 10px 0 8px 15px;
 `
 
 export const TopicsContainer = styled.div`
@@ -51,7 +51,7 @@ font-weight: 600;
 `
 export const Region = styled.p`
 color: ${(props) => props.theme.colors.text};
-  margin: -8px 5px -8px 15px;
+  margin: -8px 5px 8px 8px;
   padding: 3px 7px;
   border-radius: 2em;
   font-weight: 600;
@@ -64,7 +64,7 @@ color: ${(props) => props.theme.colors.text};
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: 15px;
+  margin: -8px 0 0 15px;
 `
 export const LanguageIcon = styled.div`
   width: 14px;

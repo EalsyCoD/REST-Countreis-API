@@ -1,5 +1,7 @@
 import React from 'react'
-import { Countries } from '../../types'
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import { Countries, RootState } from '../../types'
 
 import {
     CountriesContainer,
@@ -8,7 +10,6 @@ import {
   FullName,
   Name,
   Population,
-  TopicsContainer,
   Region,
   Capital,
   IconContainer
@@ -20,21 +21,24 @@ interface Props {
 }
 
 const Countrie: React.FC<Props> = ({data}) => {
+  const country = useSelector((state: RootState) => {
+    return state.country
+  })
   return (
     <CountriesContainer>
       <Content>
       <IconContainer>
       <IconCountrie src={data.flags.png} alt={data.flags.png} loading="lazy" />
       </IconContainer>
-      <FullName>
+      <Link to={`/country/${country.name}`}>
           <Name>{data.name}</Name>
-        </FullName>
+        </Link>
           <Population>
            Population: {data.population}
           </Population>
-          <TopicsContainer>
-              <Region>Region: {data.region}</Region>
-          </TopicsContainer>
+              <Region>
+                  Region: {data.region}
+              </Region>
               <Capital>
                 Capital: {data.capital}
               </Capital>

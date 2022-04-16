@@ -1,7 +1,7 @@
 import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import axios from 'axios'
-import { RootState, CountriesState, Countries } from '../../types'
+import { RootState, CountriesState, Countries, DispatchFilterType } from '../../types'
 
 
 
@@ -15,7 +15,7 @@ name: string
         try{
             const res = (await axios.get(
                 `${baseUrl}/name/${name}`
-            )) as { data: CountriesState }
+            )) as { data: CountriesState[] }
             dispatch({
                 type: 'NEW-COUNTRIES',
                 payload: res.data,
