@@ -13,22 +13,12 @@ name: string
 ): ThunkAction<void, RootState, unknown, AnyAction> => {
     return async (dispatch) => {
         try{
-            const { data } = (await axios.get(
+            const res = (await axios.get(
                 `${baseUrl}/name/${name}`
             )) as { data: CountriesState }
-
-            const newCountries: CountriesState = {
-                ...data,
-                items: data.items.map((item: Countries) => ({
-                    name: item.name,
-                    population: item.population,
-                    region: item.region,
-                    capital: item.capital,
-                })),
-            }
             dispatch({
                 type: 'NEW-COUNTRIES',
-                payload: newCountries,
+                payload: res.data,
             })
         }catch(err){}
     }

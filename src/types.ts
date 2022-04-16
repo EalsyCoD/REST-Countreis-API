@@ -3,10 +3,19 @@ countries: CountriesState
 }
 
 
-export type CountriesState = {
-items: Countries[]
+export type CountriesState = [
+{
+    name: string
+    population: number
+    region: string
+    capital: string
+    flags: Flags
 }
+]
 
+export type Flags = {
+    png: string
+}
 
 export type CountriesAction = {
     type: string,
@@ -19,4 +28,5 @@ export type Countries = {
     population: string,
     region: string,
     capital: string,
+    flags: Flags
 }

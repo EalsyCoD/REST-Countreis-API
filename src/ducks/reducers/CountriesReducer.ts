@@ -1,8 +1,16 @@
 import { CountriesState, CountriesAction } from '../../types'
 
-const initialState: CountriesState = {
-  items: [],
-}
+const initialState: CountriesState = [
+  {
+    name: '',
+    population: 0,
+    region: '',
+    capital: '',
+    flags: {
+      png: '',
+    }
+  }
+]
 
 const CountriesReducer = (
   state: CountriesState = initialState,
@@ -10,9 +18,7 @@ const CountriesReducer = (
 ): CountriesState => {
   switch (action.type) {
     case 'NEW-COUNTRIES':
-      return {
-        items: action.payload.items
-      }
+      return action.payload
 
     default:
       return state
