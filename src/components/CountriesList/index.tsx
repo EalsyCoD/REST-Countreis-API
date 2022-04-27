@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import { RootState } from '../../types'
+import { CountriesState, RootState } from '../../types'
 
 import { Countrie } from './Countries'
 import { Container } from './styles'

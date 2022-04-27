@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Countries, RootState } from '../../types'
+import { Countries, CountriesState, RootState } from '../../types'
 
 import {
   CountriesContainer,
@@ -30,7 +30,7 @@ const Countrie: React.FC<Props> = ({ data }) => {
         <IconContainer>
           <IconCountrie src={data.flags.png} alt={data.flags.png} loading="lazy" />
         </IconContainer>
-        <Link to={`/country/${country.name}`}>
+        <Link to={`/country/${data.name}`}>
           <Name>{data.name}</Name>
         </Link>
         <Population>

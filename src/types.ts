@@ -1,45 +1,63 @@
 export interface RootState {
-countries: CountriesState
-filter: FilterRootState
-country: CountryState
+    countries: CountriesState
+    filter: FilterRootState
+    country: CountryState
 }
 
 export type Filter = {
-region: Array<string>
+    region: Array<string>
 }
 
 export type Currencies = {
- name: string,
+    name: string,
 }
 export type Languages = {
- name: string,
+    name: string,
 }
 
-export type CountryState = {
-        name: string
-        nativeName: string,
-        population: number,
-        subregion: string,
-        region: string,
-        capital: string,
-        topLevelDomain: Array<string>
-        currencies: Currencies[],
-        languages: Languages[],
-      }
+export type CountryState = [{
+    name: string
+    nativeName: string,
+    population: number,
+    subregion: string,
+    region: string,
+    capital: string,
+    flags: FlagSVG,
+    topLevelDomain: Array<string>,
+    currencies: Currencies[],
+    borders: [],
+    languages: Languages[],
+}]
 
- export type CountryAction ={
-     type: string,
-     payload: CountryState
- }     
+
+export type Ctr = {
+    name: string
+    nativeName: string,
+    population: number,
+    subregion: string,
+    region: string,
+    capital: string,
+    flags: FlagSVG,
+    topLevelDomain: Array<string>
+    currencies: Currencies[],
+    borders: [],
+    languages: Languages[],
+}
+
+
+export type CountryAction = {
+    type: string,
+    payload: CountryState
+}
 
 export type CountriesState = [
-{
-    name: string
-    population: number
-    region: string
-    capital: string
-    flags: Flags
-},
+    {
+        name: string
+        population: number
+        region: string
+        capital: string
+        flags: Flags
+    },
 ]
 
 // export type Countriess = {
@@ -56,6 +74,9 @@ export type CountriesState = [
 
 export type Flags = {
     png: string
+}
+export type FlagSVG = {
+    svg: string
 }
 
 export type CountriesAction = {
@@ -74,9 +95,9 @@ export type Countries = {
 
 export type FilterRootState = {
     region: string
-  }
-  export type FilterAction = {
+}
+export type FilterAction = {
     type: string
     payload: FilterRootState
-  }
-  export type DispatchFilterType = (args: FilterAction) => FilterAction
+}
+export type DispatchFilterType = (args: FilterAction) => FilterAction

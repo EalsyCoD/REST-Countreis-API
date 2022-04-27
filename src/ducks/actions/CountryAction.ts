@@ -16,25 +16,11 @@ const setCountry = (
   return async (dispatch) => {
     try {
 
-      const { data } = (await axios.get(`${baseUrl}/name/${name}`)) as {
-        data: CountryState
-      }
-
-      const newData: CountryState = {
-        name: data.name,
-        nativeName: data.nativeName,
-        population: data.population,
-        subregion: data.subregion,
-        region: data.region,
-        capital: data.capital,
-        topLevelDomain: data.topLevelDomain === null ? [] : data.topLevelDomain,
-        currencies: data.currencies ? [] : data.currencies,
-        languages: data.languages ? [] : data.languages
-      }
+      const { data } = (await axios.get<CountryState>(`${baseUrl}/name/${name}`))
 
       dispatch({
         type: 'NEW-COUNTRY',
-        payload: newData,
+        payload: data,
       })
 
     } catch (error) {

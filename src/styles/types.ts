@@ -4,6 +4,7 @@ declare module 'styled-components' {
   export interface DefaultTheme {
     title: string
 
+    iconArrow: string
     iconSwitch: string
     colors: {
       backgroundColor: string
@@ -11,6 +12,7 @@ declare module 'styled-components' {
       headerColor: string
       icon: string
       input: string
+      back: string
     }
   }
 }

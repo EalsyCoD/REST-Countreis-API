@@ -2,7 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCountry } from '../../ducks/actions/CountryAction'
-
+import Country from '../../components/Country'
 
 export type RouteParams =
     | {
@@ -20,7 +20,11 @@ const CountryPage = (): JSX.Element => {
         const name: string = `/${params.name}`
         dispatch(setCountry(name))
     }, [dispatch, params.name])
-    return <React.Fragment></React.Fragment>
+    return (
+        <React.Fragment>
+            <Country name={params.name} />
+        </React.Fragment>
+    )
 }
 
 
