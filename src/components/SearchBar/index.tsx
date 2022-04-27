@@ -15,7 +15,7 @@ const SearchBar = (): JSX.Element => {
     <React.Fragment>
       <Container>
         <SearchIcon />
-        {/* <Input
+        <Input
           type='text'
           placeholder="Search for a country..."
           value={value}
@@ -26,7 +26,7 @@ const SearchBar = (): JSX.Element => {
               dispatch(setCountries(event.target.value))
             }
           }}
-        /> */}
+        />
       </Container>
     </React.Fragment>
   )
