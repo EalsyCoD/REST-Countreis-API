@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { setFilter } from '../ducks/actions/FilterAction'
-import { Filter, RootState } from '../types'
+import { setFilter } from '../../ducks/actions/FilterAction'
+import { Filter, RootState } from '../../types'
 
 import { ContainerSelect, Select, Option } from './styles'
 

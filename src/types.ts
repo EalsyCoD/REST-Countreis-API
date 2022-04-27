@@ -50,27 +50,13 @@ export type CountryAction = {
     payload: CountryState
 }
 
-export type CountriesState = [
-    {
-        name: string
-        population: number
-        region: string
-        capital: string
-        flags: Flags
-    },
-]
-
-// export type Countriess = {
-//     items: ICountries[]
-// }
-
-// export type ICountries = {
-//     name: string
-//     population: number
-//     region: string
-//     capital: string
-//     flags: Flags
-// }
+export type CountriesState = [{
+    name: string
+    population: number
+    region: string
+    capital: string
+    flags: Flags
+}]
 
 export type Flags = {
     png: string
@@ -87,7 +73,7 @@ export type CountriesAction = {
 
 export type Countries = {
     name: string
-    population: string,
+    population: number,
     region: string,
     capital: string,
     flags: Flags

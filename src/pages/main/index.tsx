@@ -3,7 +3,7 @@ import React from 'react'
 
 import CountriesList from '../../components/CountriesList'
 import SearchBar from '../../components/SearchBar'
-import FilterPanel from '../../FilterPanel'
+import FilterPanel from '../../components/FilterPanel'
 
 
 const MainPage = (): JSX.Element => {

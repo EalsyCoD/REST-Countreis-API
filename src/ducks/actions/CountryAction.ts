@@ -16,8 +16,9 @@ const setCountry = (
   return async (dispatch) => {
     try {
 
-      const { data } = (await axios.get<CountryState>(`${baseUrl}/name/${name}`))
-
+      const { data } = (await axios.get<CountryState>(
+        `${baseUrl}/name/${name}`
+      ))
       dispatch({
         type: 'NEW-COUNTRY',
         payload: data,

@@ -1,13 +1,11 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { Countries, CountriesState, RootState } from '../../types'
+import { Countries } from '../../types'
 
 import {
   CountriesContainer,
   IconCountrie,
   Content,
-  FullName,
   Name,
   Population,
   Region,
@@ -21,9 +19,6 @@ interface Props {
 }
 
 const Countrie: React.FC<Props> = ({ data }) => {
-  const country = useSelector((state: RootState) => {
-    return state.country
-  })
   return (
     <CountriesContainer>
       <Content>

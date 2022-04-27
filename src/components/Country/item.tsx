@@ -1,5 +1,5 @@
 import React from 'react'
-import { CountryState, Ctr } from '../../types'
+import { Ctr } from '../../types'
 
 
 
@@ -22,7 +22,6 @@ import {
     Topic,
     Topics,
     Border,
-    Button
 } from './styles'
 
 

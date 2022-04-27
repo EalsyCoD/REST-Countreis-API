@@ -1,16 +1,14 @@
 import { CountriesState, CountriesAction } from '../../types'
 
-const initialState: CountriesState = [
-  {
-    name: '',
-    population: 0,
-    region: '',
-    capital: '',
-    flags: {
-      png: '',
-    }
-  },
-]
+const initialState: CountriesState = [{
+  name: '',
+  population: 0,
+  region: '',
+  capital: '',
+  flags: {
+    png: '',
+  }
+}]
 
 const CountriesReducer = (
   state: CountriesState = initialState,
