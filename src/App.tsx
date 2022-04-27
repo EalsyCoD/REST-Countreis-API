@@ -13,7 +13,7 @@ import Country from './pages/country'
 import { Route, Routes } from 'react-router-dom';
 
 const App = (): JSX.Element => {
-const dispatch = useDispatch()
+  const dispatch = useDispatch()
   React.useEffect(() => {
     dispatch(setCountries('a'))
   }, [dispatch])
@@ -26,16 +26,16 @@ const dispatch = useDispatch()
   }
   return (
     <React.Fragment>
-    <ThemeProvider theme={theme}>
-    <GlobalStyle />
-    <Header toggleTheme={toggleTheme} titleTheme={theme.title} />
-    <Routes>
-      <Route path='/' element={<Home />} />
-      <Route path='/country/:name' element={<Country />} />
-    </Routes>
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header toggleTheme={toggleTheme} titleTheme={theme.title} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/country/:name' element={<Country />} />
+        </Routes>
+      </ThemeProvider>
     </React.Fragment>
-    
+
   )
 }
 

@@ -20,10 +20,10 @@ const CountriesList = (): JSX.Element => {
     <React.Fragment>
       {countries.length > 0 ? (
         <Container>
-            {countries.map((item: any) => (
-              <Countrie key={item.name} data={item} />
-            ))}
-            </Container>
+          {countries.map((item: any) => (
+            <Countrie key={item.name} data={item} />
+          ))}
+        </Container>
       ) : (
         <React.Fragment></React.Fragment>
       )}

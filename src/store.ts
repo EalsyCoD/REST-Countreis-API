@@ -8,7 +8,7 @@ import filterReducer from './ducks/reducers/FilterReducer'
 import countryReducer from './ducks/reducers/CountryReducer'
 
 const reducer = combineReducers<RootState>({
-    countries:countriesReducer,
+    countries: countriesReducer,
     filter: filterReducer,
     country: countryReducer
 })

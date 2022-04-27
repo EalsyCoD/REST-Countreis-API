@@ -9,10 +9,10 @@ import FilterPanel from '../../FilterPanel'
 const MainPage = (): JSX.Element => {
     return (
         <React.Fragment>
-        <FilterPanel />
-        <SearchBar />
-        <CountriesList />
-    </React.Fragment>
+            <FilterPanel />
+            <SearchBar />
+            <CountriesList />
+        </React.Fragment>
     )
 }
 

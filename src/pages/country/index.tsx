@@ -4,11 +4,11 @@ import { useDispatch } from 'react-redux'
 import { setCountry } from '../../ducks/actions/CountryAction'
 
 
-export type RouteParams = 
-| {
-    name: string,
-}
-| Record<string, string | any>;
+export type RouteParams =
+    | {
+        name: string,
+    }
+    | Record<string, string | any>;
 
 const CountryPage = (): JSX.Element => {
     const params = useParams<RouteParams>()

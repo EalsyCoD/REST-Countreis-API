@@ -1,7 +1,8 @@
 import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import axios from 'axios'
-import { RootState, CountriesState, Countries, DispatchFilterType } from '../../types'
+import { RootState, CountriesState } from '../../types'
+import { setFilter } from './FilterAction'
 
 
 
@@ -9,18 +10,18 @@ const baseUrl: string = 'https://restcountries.com/v2'
 
 
 const setCountries = (
-name: string
+    name: string
 ): ThunkAction<void, RootState, unknown, AnyAction> => {
     return async (dispatch) => {
-        try{
-            const res = (await axios.get(
+        try {
+            const { data } = (await axios.get<CountriesState>(
                 `${baseUrl}/name/${name}`
-            )) as { data: CountriesState[] }
+            ))
             dispatch({
                 type: 'NEW-COUNTRIES',
-                payload: res.data,
+                payload: data
             })
-        }catch(err){}
+        } catch (err) { }
     }
 }
 

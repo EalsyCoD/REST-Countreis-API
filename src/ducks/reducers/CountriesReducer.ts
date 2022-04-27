@@ -19,7 +19,7 @@ const CountriesReducer = (
   switch (action.type) {
     case 'NEW-COUNTRIES':
       return action.payload
-      
+
     default:
       return state
   }

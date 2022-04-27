@@ -1,16 +1,16 @@
 import { CountryState, CountryAction } from '../../types'
 
 const initialState: CountryState = {
-    name: '',
-    nativeName: '',
-    population: 0,
-    subregion: '',
-    region: '',
-    capital: '',
-    topLevelDomain: [],
-    currencies: [],
-    languages: [],
-  }
+  name: '',
+  nativeName: '',
+  population: 0,
+  subregion: '',
+  region: '',
+  capital: '',
+  topLevelDomain: [],
+  currencies: [],
+  languages: [],
+}
 
 
 const RepoReducer = (

@@ -5,7 +5,7 @@ import axios from 'axios'
 import {
   RootState,
   CountryState,
-  
+
 } from '../../types'
 
 const baseUrl: string = 'https://restcountries.com/v2'
