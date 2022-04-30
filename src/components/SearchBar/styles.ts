@@ -7,6 +7,14 @@ export const Container = styled.div`
   border-radius: 0.938em;
   @media (min-width: 1024px) {
     width: 85em;
+    
+  }
+  @media (max-width: 1440px) {
+    width: 65em;
+  }
+  @media (max-width: 1024px) {
+    width: 300px;
+    margin-left: 19%;
   }
   `
 export const SearchIcon = styled.div`

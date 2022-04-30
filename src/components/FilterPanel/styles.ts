@@ -3,6 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
 margin: 0 auto;
 width: 0;
+@media (max-width: 1440px) {
+ margin: 0 40%;
+}
+@media (max-width: 1024px) {
+  margin: 0 20%;
+}
 `
 
 export const ContainerSelect = styled.div`

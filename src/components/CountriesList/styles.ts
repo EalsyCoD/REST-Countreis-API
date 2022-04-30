@@ -5,6 +5,18 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   border-radius: 0.938em;
+  @media (max-width: 1414px) {
+    margin-left: 33%;
+  }
+  @media (max-width: 1204px) {
+    margin-left: 30%;
+  }
+  @media (max-width: 1131px) {
+    margin-left: 40%;
+  }
+  @media (max-width: 1024px) {
+    margin-left: 35%;
+  }
 `
 export const CountriesContainer = styled.div`
   max-width: 330px;

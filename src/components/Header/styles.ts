@@ -9,6 +9,10 @@ export const Container = styled.header`
   @media (min-width: 560px) {
     width: 75rem;
   }
+  @media (max-width: 1024px) {
+    width: 35rem;
+    margin: 25px 19%;
+  }
 `
 
 export const Title = styled.h1`
