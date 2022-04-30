@@ -22,6 +22,7 @@ import {
     Topic,
     Topics,
     Border,
+    Cur,
 } from './styles'
 
 
@@ -43,8 +44,13 @@ const Item: React.FC<Props> = ({ data }) => {
                     <Population>Population: {data.population}</Population>
                     <Region>Region: {data.region}</Region>
                     <SubRegion>Sub Region: {data.subregion}</SubRegion>
-                    <Capital>Capital: {data.capital}</Capital>
-                    {data.borders.length > 0 ? (
+                    {data.capital !== undefined ? (
+                        <Capital>Capital: {data.capital}</Capital>
+                    ) : (
+                        <React.Fragment></React.Fragment>
+                    )}
+
+                    {data.borders !== undefined ? (
                         <Border>
                             <Topic>Border Countries:
                                 {data.borders.map((item, i) => (
@@ -58,9 +64,16 @@ const Item: React.FC<Props> = ({ data }) => {
                 </Name>
                 <Domain>
                     <TopLevelDomain>Top Level Domain: {data.topLevelDomain}</TopLevelDomain>
-                    {data.currencies.map((item, i) => (
-                        <Currencies key={i}>Currencies: {item.name}</Currencies>
-                    ))}
+                    {data.currencies !== undefined ? (
+                        <Cur>
+                            {data.currencies.map((item, i) => (
+                                <Currencies key={i}>Currencies: {item.name}</Currencies>
+                            ))}
+                        </Cur>
+                    ) : (
+                        <React.Fragment></React.Fragment>
+                    )}
+
                     <Language>Languages:
                         {data.languages.map((item, i) => (
                             <Languages key={i}>{item.name},</Languages>

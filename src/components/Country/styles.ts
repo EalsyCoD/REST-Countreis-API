@@ -16,7 +16,7 @@ width: 500px;
 height: 360px;
 `
 export const Name = styled.div`
-width: 220px;
+width: 250px;
 margin: 20px 0 0 100px;
 `
 export const NameCountry = styled.h1`
@@ -53,28 +53,34 @@ export const Languages = styled.p`
 margin-left: 5px;
 `
 export const Language = styled.div`
+width: 400px;
 display: flex;
 margin-top: 20px;
 
 `
 export const Border = styled.div`
+width: 300px;
 display: flex;
 margin-top: 20px;
-width: 800px;
+width: 650px;
 `
 export const Topic = styled.p`
 display: flex;
 margin-top: 50px;
+flex-wrap: wrap;
 `
 export const Topics = styled.p`
 width: 100px;
 height: 25px;
 border: 1px solid ${(props) => props.theme.colors.backgroundColor};
 background-color: ${(props) => props.theme.colors.backgroundColor};
-margin-left: 15px;
+margin: 0 0 10px 15px;
 padding: 2px 0 0 30px;
 `
 export const Image = styled.div`
+
+`
+export const Cur = styled.div`
 
 `
 export const Button = styled.button`
