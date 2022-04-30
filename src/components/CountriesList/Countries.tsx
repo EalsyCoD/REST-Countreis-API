@@ -34,9 +34,14 @@ const Countrie: React.FC<Props> = ({ data }) => {
         <Region>
           Region: {data.region}
         </Region>
-        <Capital>
-          Capital: {data.capital}
-        </Capital>
+        {data.capital !== undefined ? (
+          <Capital>
+            Capital: {data.capital}
+          </Capital>
+        ) : (
+          <React.Fragment><Region>Capital: No Capital in API</Region></React.Fragment>
+        )}
+
       </Content>
     </CountriesContainer>
   )

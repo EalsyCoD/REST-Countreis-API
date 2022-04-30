@@ -1,14 +1,13 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setFilter } from '../../ducks/actions/FilterAction'
-import { Filter, RootState } from '../../types'
+import { CountryState, Ctr, Filter, RootState } from '../../types'
 
 import { ContainerSelect, Select, Option } from './styles'
 
 const FilterByRegion = (): JSX.Element => {
   const dispatch = useDispatch()
-  const countries = useSelector((state: RootState) => state.countries)
-  const isValue = useSelector((state: RootState) => state.filter.region)
+  const countries = useSelector((state: CountryState) => state)
   const [region, setRegion] = React.useState('Filter by Region')
 
   return (
@@ -20,8 +19,7 @@ const FilterByRegion = (): JSX.Element => {
             dispatch(setFilter(e.target.value))
           }}
         >
-          <Option>Filter by Region</Option>
-          <Option>Africa</Option>
+          <Option>{region}</Option>
           <Option>Americas</Option>
           <Option>Asia</Option>
           <Option>Europe</Option>

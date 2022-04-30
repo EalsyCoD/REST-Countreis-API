@@ -23,6 +23,7 @@ import {
     Topics,
     Border,
     Cur,
+    MobileAdaptive
 } from './styles'
 
 
@@ -38,48 +39,51 @@ const Item: React.FC<Props> = ({ data }) => {
                 <Image>
                     <ImageCountry src={data.flags.svg} alt={data.flags.svg} />
                 </Image>
-                <Name>
-                    <NameCountry>{data.name}</NameCountry>
-                    <NativeName>Native Name: {data.name}</NativeName>
-                    <Population>Population: {data.population}</Population>
-                    <Region>Region: {data.region}</Region>
-                    <SubRegion>Sub Region: {data.subregion}</SubRegion>
-                    {data.capital !== undefined ? (
-                        <Capital>Capital: {data.capital}</Capital>
-                    ) : (
-                        <React.Fragment></React.Fragment>
-                    )}
+                <MobileAdaptive>
+                    <Name>
+                        <NameCountry>{data.name}</NameCountry>
+                        <NativeName>Native Name: {data.name}</NativeName>
+                        <Population>Population: {data.population}</Population>
+                        <Region>Region: {data.region}</Region>
+                        <SubRegion>Sub Region: {data.subregion}</SubRegion>
+                        {data.capital !== undefined ? (
+                            <Capital>Capital: {data.capital}</Capital>
+                        ) : (
+                            <React.Fragment></React.Fragment>
+                        )}
 
-                    {data.borders !== undefined ? (
-                        <Border>
-                            <Topic>Border Countries:
-                                {data.borders.map((item, i) => (
-                                    <Topics key={i}>{item},</Topics>
+                        {data.borders !== undefined ? (
+                            <Border>
+                                <Topic>Border Countries:
+                                    {data.borders.map((item, i) => (
+                                        <Topics key={i}>{item}</Topics>
+                                    ))}
+                                </Topic>
+                            </Border>
+                        ) : (
+                            <React.Fragment></React.Fragment>
+                        )}
+                    </Name>
+                    <Domain>
+                        <TopLevelDomain>Top Level Domain: {data.topLevelDomain}</TopLevelDomain>
+                        {data.currencies !== undefined ? (
+                            <Cur>
+                                {data.currencies.map((item, i) => (
+                                    <Currencies key={i}>Currencies: {item.name}</Currencies>
                                 ))}
-                            </Topic>
-                        </Border>
-                    ) : (
-                        <React.Fragment></React.Fragment>
-                    )}
-                </Name>
-                <Domain>
-                    <TopLevelDomain>Top Level Domain: {data.topLevelDomain}</TopLevelDomain>
-                    {data.currencies !== undefined ? (
-                        <Cur>
-                            {data.currencies.map((item, i) => (
-                                <Currencies key={i}>Currencies: {item.name}</Currencies>
-                            ))}
-                        </Cur>
-                    ) : (
-                        <React.Fragment></React.Fragment>
-                    )}
+                            </Cur>
+                        ) : (
+                            <React.Fragment></React.Fragment>
+                        )}
 
-                    <Language>Languages:
-                        {data.languages.map((item, i) => (
-                            <Languages key={i}>{item.name},</Languages>
-                        ))}
-                    </Language>
-                </Domain>
+                        <Language>Languages:
+                            {data.languages.map((item, i) => (
+                                <Languages key={i}>{item.name},</Languages>
+                            ))}
+                        </Language>
+
+                    </Domain>
+                </MobileAdaptive>
             </ItemContainer>
         </React.Fragment>
     )

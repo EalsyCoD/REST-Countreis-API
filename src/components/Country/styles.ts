@@ -6,9 +6,21 @@ padding: 30px 100px 30px 35px;
   @media (min-width: 560px) {
     width: 75rem;
   }
+  @media (max-width: 1440px) {
+    width: 85rem;
+    padding: 0 0 0 50px;
+  }
+  @media (max-width: 1024px) {
+    width: 45rem;
+    padding: 0 0 0 50px;
+  }
 `
 export const ItemContainer = styled.div`
 display: flex;
+@media (max-width: 1024px) {
+  display: block;
+
+}
 `
 
 export const ImageCountry = styled.img`
@@ -16,11 +28,22 @@ width: 500px;
 height: 360px;
 `
 export const Name = styled.div`
-width: 250px;
+width: 300px;
 margin: 20px 0 0 100px;
+@media (max-width: 1024px) {
+  margin: 0 0 0 -100px;
+
+}
+`
+export const MobileAdaptive = styled.div`
+display: flex;
+@media (max-width: 1024px) {
+display: flex;
+margin-left: 100px;
+}
 `
 export const NameCountry = styled.h1`
-
+width: 300px;
 `
 export const NativeName = styled.p`
 margin-top: 20px;
@@ -39,7 +62,7 @@ margin-top: 20px;
 `
 
 export const Domain = styled.div`
-margin: 75px 0 0 50px;
+margin: 80px 0 0 0;
 `
 
 export const TopLevelDomain = styled.p`
@@ -53,7 +76,7 @@ export const Languages = styled.p`
 margin-left: 5px;
 `
 export const Language = styled.div`
-width: 400px;
+width: 450px;
 display: flex;
 margin-top: 20px;
 
