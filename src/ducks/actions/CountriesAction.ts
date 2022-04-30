@@ -2,7 +2,7 @@ import { AnyAction } from 'redux'
 import { ThunkAction } from 'redux-thunk'
 import axios from 'axios'
 import { RootState, CountriesState } from '../../types'
-import { setFilter } from './FilterAction'
+import { clearFilter } from './FilterAction'
 
 
 
@@ -17,6 +17,8 @@ const setCountries = (
             const { data } = (await axios.get<CountriesState>(
                 `${baseUrl}/name/${name}`
             ))
+
+            dispatch(clearFilter())
             dispatch({
                 type: 'NEW-COUNTRIES',
                 payload: data

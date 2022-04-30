@@ -35,7 +35,7 @@ export type Ctr = {
     nativeName: string,
     population: number,
     subregion: string,
-    region: string,
+    region: string
     capital: string,
     flags: FlagSVG,
     topLevelDomain: Array<string>
@@ -61,6 +61,7 @@ export type CountriesState = [{
 export type Flags = {
     png: string
 }
+
 export type FlagSVG = {
     svg: string
 }

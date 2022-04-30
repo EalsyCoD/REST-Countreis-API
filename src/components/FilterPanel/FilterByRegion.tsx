@@ -21,7 +21,11 @@ const FilterByRegion = (): JSX.Element => {
           }}
         >
           <Option>Filter by Region</Option>
-          {Object.keys(countries).map((value, i) => <Option key={i} value={value}>{value}</Option>)}
+          <Option>Africa</Option>
+          <Option>Americas</Option>
+          <Option>Asia</Option>
+          <Option>Europe</Option>
+          <Option>Oceania</Option>
         </Select>
       </ContainerSelect>
     </React.Fragment>

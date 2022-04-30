@@ -12,7 +12,7 @@ const FilterReducer = (
     case 'SET-FILTER':
     case 'CLEAR-FILTER':
       return {
-        region: action.payload.region,
+        region: action.payload.region
       }
     default:
       return state
