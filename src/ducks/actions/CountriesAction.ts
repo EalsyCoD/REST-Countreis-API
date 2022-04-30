@@ -3,6 +3,7 @@ import { ThunkAction } from 'redux-thunk'
 import axios from 'axios'
 import { RootState, CountriesState } from '../../types'
 import { clearFilter } from './FilterAction'
+import { setNotification } from './NotificationAction'
 
 
 
@@ -23,7 +24,9 @@ const setCountries = (
                 type: 'NEW-COUNTRIES',
                 payload: data
             })
-        } catch (err) { }
+        } catch (err) {
+            dispatch(setNotification('Страна не найденна!', 400, 3))
+        }
     }
 }
 

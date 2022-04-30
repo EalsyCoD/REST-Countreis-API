@@ -2,7 +2,22 @@ export interface RootState {
     countries: CountriesState
     filter: FilterRootState
     country: CountryState
+    notification: NotificationState
 }
+
+export type NotificationState = {
+    message: string | null;
+    status: number | null;
+};
+
+export type NotificationAction = {
+    type: string;
+    payload: NotificationState;
+};
+
+export type DispatchNotificationType = (
+    args: NotificationAction
+) => NotificationAction;
 
 export type Filter = {
     region: Array<string>

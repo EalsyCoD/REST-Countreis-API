@@ -22,7 +22,7 @@ const App = (): JSX.Element => {
 
 
   const toggleTheme = () => {
-    setTheme(theme.title === 'Light' ? Dark : Light)
+    setTheme(theme.title === 'Dark' ? Light : Dark)
   }
   return (
     <React.Fragment>
