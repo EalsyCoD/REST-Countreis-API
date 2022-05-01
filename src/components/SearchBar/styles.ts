@@ -13,8 +13,8 @@ export const Container = styled.div`
     width: 65em;
   }
   @media (max-width: 1024px) {
-    width: 300px;
-    margin-left: 19%;
+    width: 21em;
+    margin-left: 18%;
   }
   `
 export const SearchIcon = styled.div`

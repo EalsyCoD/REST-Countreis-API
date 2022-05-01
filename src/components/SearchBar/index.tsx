@@ -2,7 +2,7 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { setCountries } from '../../ducks/actions/CountriesAction'
 
-import { Container, SearchIcon, Input, Button } from './styles'
+import { Container, SearchIcon, Input } from './styles'
 
 const SearchBar = (): JSX.Element => {
   const dispatch = useDispatch()

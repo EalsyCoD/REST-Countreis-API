@@ -50,12 +50,12 @@ export type Ctr = {
     nativeName: string,
     population: number,
     subregion: string,
-    region: string | [],
-    capital: string | undefined,
+    region: string,
+    capital: string,
     flags: FlagSVG,
     topLevelDomain: Array<string>
     currencies: Currencies[],
-    borders: [] | undefined,
+    borders: [],
     languages: Languages[],
 }
 
