@@ -1,8 +1,6 @@
 import React from 'react'
 import { Ctr } from '../../types'
 
-
-
 import {
     ImageCountry,
     ItemContainer,

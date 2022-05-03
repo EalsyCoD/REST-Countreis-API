@@ -7,7 +7,7 @@ const initialState: CountriesState = [{
   capital: '',
   flags: {
     png: '',
-  }
+  },
 }]
 
 const CountriesReducer = (

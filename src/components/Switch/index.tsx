@@ -11,7 +11,7 @@ const Switch: React.FC<Props> = ({ toggleTheme, titleTheme }) => {
   return (
     <Container onClick={toggleTheme}>
       <SwitcherIcon />
-      <Title>{titleTheme}</Title>
+      <Title>Dark mode</Title>
     </Container>
   )
 }

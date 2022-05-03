@@ -30,6 +30,13 @@ export type Languages = {
     name: string,
 }
 
+export enum FiltersCountr {
+    Americas = 'Americas',
+    Asia = 'Asia',
+    Europe = 'Europe',
+    Oceania = 'Oceania',
+}
+
 export type CountryState = [{
     name: string
     nativeName: string,
@@ -38,12 +45,12 @@ export type CountryState = [{
     region: string,
     capital: string,
     flags: FlagSVG,
+    latlng: Array<number>,
     topLevelDomain: Array<string>,
     currencies: Currencies[],
     borders: [],
     languages: Languages[],
 }]
-
 
 export type Ctr = {
     name: string
@@ -52,6 +59,7 @@ export type Ctr = {
     subregion: string,
     region: string,
     capital: string,
+    latlng: Array<number>,
     flags: FlagSVG,
     topLevelDomain: Array<string>
     currencies: Currencies[],

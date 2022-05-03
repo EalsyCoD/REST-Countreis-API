@@ -18,13 +18,15 @@ const CountriesList = (): JSX.Element => {
   return (
     <React.Fragment>
       {countries.length > 0 ? (
-        <Container>
-          {countries.map((item) => (
-            <Countrie key={item.name} data={item} />
-          ))}
-        </Container>
+        <>
+          <Container>
+            {countries.map((item) => (
+              <Countrie key={item.name} data={item} />
+            ))}
+          </Container>
+        </>
       ) : (
-        <React.Fragment></React.Fragment>
+        <React.Fragment>Please enter correct name!</React.Fragment>
       )}
     </React.Fragment>
   )

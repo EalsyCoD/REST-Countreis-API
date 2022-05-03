@@ -28,7 +28,7 @@ const App = (): JSX.Element => {
     <React.Fragment>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Header toggleTheme={toggleTheme} titleTheme={theme.title} />
+        <Header toggleTheme={toggleTheme} titleTheme={''} />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/country/:name' element={<Country />} />

@@ -10,6 +10,7 @@ const initialState: CountryState = [{
   flags: {
     svg: ''
   },
+  latlng: [],
   topLevelDomain: [],
   currencies: [],
   languages: [],

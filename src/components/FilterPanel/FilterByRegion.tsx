@@ -5,10 +5,17 @@ import { CountryState, Ctr, Filter, RootState } from '../../types'
 
 import { ContainerSelect, Select, Option } from './styles'
 
+
 const FilterByRegion = (): JSX.Element => {
   const dispatch = useDispatch()
-  const countries = useSelector((state: CountryState) => state)
+  const countries = useSelector((state: RootState) => state)
   const [region, setRegion] = React.useState('Filter by Region')
+  const Region = [
+    'Americas',
+    'Asia',
+    'Europe',
+    "Oceania",
+  ]
 
   return (
     <React.Fragment>
@@ -20,10 +27,9 @@ const FilterByRegion = (): JSX.Element => {
           }}
         >
           <Option>{region}</Option>
-          <Option>Americas</Option>
-          <Option>Asia</Option>
-          <Option>Europe</Option>
-          <Option>Oceania</Option>
+          {Region.map((item, i) => (
+            <Option key={i}>{item}</Option>
+          ))}
         </Select>
       </ContainerSelect>
     </React.Fragment>

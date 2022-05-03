@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { setCountry } from '../../ducks/actions/CountryAction'
 import Country from '../../components/Country'
+import Map from '../../components/Map'
 
 export type RouteParams =
     | {
@@ -23,6 +24,7 @@ const CountryPage = (): JSX.Element => {
     return (
         <React.Fragment>
             <Country name={params.name} />
+            <Map />
         </React.Fragment>
     )
 }
