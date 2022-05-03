@@ -30,13 +30,6 @@ export type Languages = {
     name: string,
 }
 
-export enum FiltersCountr {
-    Americas = 'Americas',
-    Asia = 'Asia',
-    Europe = 'Europe',
-    Oceania = 'Oceania',
-}
-
 export type CountryState = [{
     name: string
     nativeName: string,
@@ -45,7 +38,7 @@ export type CountryState = [{
     region: string,
     capital: string,
     flags: FlagSVG,
-    latlng: Array<number>,
+    latlng: [],
     topLevelDomain: Array<string>,
     currencies: Currencies[],
     borders: [],

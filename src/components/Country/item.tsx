@@ -1,6 +1,6 @@
 import React from 'react'
 import { Ctr } from '../../types'
-
+import Map from '../Map'
 import {
     ImageCountry,
     ItemContainer,

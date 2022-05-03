@@ -19,7 +19,6 @@ const setCountry = (
       const { data } = (await axios.get<CountryState>(
         `${baseUrl}/name/${name}`
       ))
-      console.log(data)
       dispatch({
         type: 'NEW-COUNTRY',
         payload: data,

@@ -14,9 +14,7 @@ const LeafletIcon = icon({
 })
 
 const Item: React.FC<Props> = ({ data }) => {
-
     const position = [data.latlng[0], data.latlng[1]]
-    const pos = [51, 20]
 
     const CenterMap = ({ coords }: any) => {
         const map = useMap()
@@ -27,22 +25,25 @@ const Item: React.FC<Props> = ({ data }) => {
 
     return (
         <Container>
-            <MapContainer
-                center={pos}
-                zoom={13}
-                scrollWheelZoom={false}
-            >
-                <TileLayer
-                    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                <Marker icon={LeafletIcon} position={pos}>
-                    <Popup>
-                        {data.name}
-                    </Popup>
-                </Marker>
-                <CenterMap coords={pos} />
-            </MapContainer>
+            {data.latlng[0] && data.latlng[1] &&
+                <MapContainer
+                    center={position}
+                    zoom={13}
+                    scrollWheelZoom={false}
+                >
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    <Marker icon={LeafletIcon} position={position}>
+                        <Popup>
+                            {data.name}
+                        </Popup>
+                    </Marker>
+                    <CenterMap coords={position} />
+                </MapContainer>
+            }
+
         </Container>
     )
 }
