@@ -22,7 +22,6 @@ const RepoReducer = (
   state: CountryState = initialState,
   action: CountryAction
 ): CountryState => {
-  console.log(action.payload)
   switch (action.type) {
     case 'NEW-COUNTRY':
       return action.payload

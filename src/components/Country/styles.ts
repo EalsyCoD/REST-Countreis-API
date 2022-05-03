@@ -87,12 +87,12 @@ display: flex;
 margin-top: 20px;
 width: 650px;
 `
-export const Topic = styled.p`
+export const Topic = styled.div`
 display: flex;
 margin-top: 50px;
 flex-wrap: wrap;
 `
-export const Topics = styled.p`
+export const Topics = styled.div`
 width: 100px;
 height: 25px;
 border: 1px solid ${(props) => props.theme.colors.backgroundColor};
